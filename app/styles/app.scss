@@ -1,0 +1,31 @@
+$stormy: #494E6B;
+$cloud: #98878F;
+$sunset: #985E6D;
+$evening: #192231;
+$white: #ffffff;
+
+html,
+body{
+  padding: 0;
+  margin: 0;
+}
+
+.header{
+  background-color: $stormy;
+  height: 8vh;
+  color: $white;
+  font-weight: 400;
+  font-size: 1.8vmax;
+
+  ul{
+    list-style-type: none;
+
+    li{
+      float: left;
+      padding: .9vmax;
+    }
+
+  }
+
+
+}
