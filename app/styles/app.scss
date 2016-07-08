@@ -1,31 +1,89 @@
-$stormy: #494E6B;
-$cloud: #98878F;
-$sunset: #985E6D;
-$evening: #192231;
-$white: #ffffff;
+$dark: #3C494F;
+$medium: #5A6A71;
+$white: #FFFFFF;
 
 html,
 body{
   padding: 0;
   margin: 0;
+  background-color: $white;
 }
 
 .header{
-  background-color: $stormy;
-  height: 8vh;
+  background-color: $dark;
+  height: 4vmax;
+  color: $white;
+  font-weight: 400;
+  font-size: 1.8vmax;
+}
+
+.menu{
+  margin-top: -10px;
+  background-color: $medium;
+  height: 8vmax;
   color: $white;
   font-weight: 400;
   font-size: 1.8vmax;
 
-  ul{
-    list-style-type: none;
+  a{
+    color: inherit;
+    text-decoration: none;
+  }
 
-    li{
+  .options {
+    .option-group {
       float: left;
       padding: .9vmax;
     }
-
+    .option-group div:nth-child(1){
+      color: $dark;
+      text-align: center;
+    }
+    .option-group div:not(:nth-child(1)){
+      float: left;
+      padding: .9vmax;
+    }
   }
 
+}
 
+.champion{
+  color: $medium;
+
+  .name{
+    font-size: 1.5vmax;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .image img{
+    max-width: 100%;
+    height: auto;
+
+    display: block;
+    margin: auto;
+  }
+}
+
+.full-container{
+  width: 100%;
+  min-height: 100%;
+}
+
+.my-to-buy{
+  float: left;
+  min-width: 50%;
+  max-width: 50%;
+  min-height: 100%;
+  background-color: $medium;
+  opacity: .9;
+  //height: 84vh;
+}
+
+.available-to-buy{
+  float: left;
+  min-width: 50%;
+  max-width: 50%;
 }

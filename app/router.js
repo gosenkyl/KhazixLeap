@@ -7,6 +7,10 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('champions');
+  this.route('buy');
+  this.route('skins');
+  this.route('pick');
+  this.route('ban');
 });
 
 export default Router;

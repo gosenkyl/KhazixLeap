@@ -1,0 +1,11 @@
+<div class="row">
+  {{#each content as |champion|}}
+
+        <div class="{{columnSizeClasses}}">
+
+          {{champion-card content=champion}}
+
+        </div>
+
+  {{/each}}
+  </div>
