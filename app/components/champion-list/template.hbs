@@ -3,7 +3,11 @@
 
         <div class="{{columnSizeClasses}}">
 
-          {{champion-card content=champion}}
+          {{#draggable-object content=champion dragStartAction='dragStart' dragEndAction='dragEnd'}}
+
+            {{champion-card content=champion}}
+
+          {{/draggable-object}}
 
         </div>
 

@@ -9,6 +9,11 @@ body{
   background-color: $white;
 }
 
+ul{
+  list-style-type: none;
+  padding: 0;
+}
+
 .header{
   background-color: $dark;
   height: 4vmax;
@@ -68,22 +73,44 @@ body{
 }
 
 .full-container{
-  width: 100%;
-  min-height: 100%;
+
 }
 
+
 .my-to-buy{
-  float: left;
-  min-width: 50%;
-  max-width: 50%;
-  min-height: 100%;
-  background-color: $medium;
-  opacity: .9;
-  //height: 84vh;
+  height: 90vh;
+  overflow-y: scroll;
+
+  .buy-container {
+    margin: 0 20px;
+
+    height: 100%;
+    text-align: center;
+    color: $white;
+    background-color: $medium;
+
+    .champion{
+      color: $white;
+    }
+
+    ul > li {
+      width: 33%;
+      border-bottom: solid $white thin;
+    }
+
+    .placeholder-text {
+      padding: 25px;
+    }
+
+  }
+
 }
 
 .available-to-buy{
-  float: left;
-  min-width: 50%;
-  max-width: 50%;
+
+  .champion-list{
+    height: 90vh;
+    overflow-y: scroll;
+  }
+
 }

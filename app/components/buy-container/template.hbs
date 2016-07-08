@@ -1,6 +1,19 @@
-<div class="my-to-buy">
+{{#draggable-object-target action="dropChampion" dragOverAction="dragOver" dragOutAction="dragOut"}}
+  <div class="my-to-buy col-md-6">
+    <div class="buy-container">
 
-</div>
-<div class="available-to-buy">
-  {{champion-list content=content containerSize="half"}}
+      <div class="placeholder-text">Drag a Champion</div>
+
+      {{#if championsSelected}}
+        <ul><li {{action "clearAll"}}>Clear</li></ul>
+      {{/if}}
+
+      {{champion-list content=selectedChampions containerSize="half"}}
+
+    </div>
+  </div>
+{{/draggable-object-target}}
+
+<div class="available-to-buy col-md-6">
+  {{champion-list content=availableChampions containerSize="half"}}
 </div>
