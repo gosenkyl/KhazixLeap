@@ -22,18 +22,6 @@ export default Component.extend({
     }
 
     return classes;
-  }),
-
-  actions: {
-
-    dragStart: function(content){
-      console.log("DRAG START", content);
-    },
-
-    dragEnd: function(content){
-      console.log("DRAG END", content);
-    }
-
-  }
+  })
 
 });

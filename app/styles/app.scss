@@ -76,12 +76,15 @@ ul{
 
 }
 
+.float-left{
+  float: left;
+}
 
-.my-to-buy{
-  height: 90vh;
+.selected{
+  height: 88vh;
   overflow-y: scroll;
 
-  .buy-container {
+  .selected-container {
     margin: 0 20px;
 
     height: 100%;
@@ -101,15 +104,13 @@ ul{
     .placeholder-text {
       padding: 25px;
     }
-
   }
-
 }
 
-.available-to-buy{
+.available{
 
   .champion-list{
-    height: 90vh;
+    height: 88vh;
     overflow-y: scroll;
   }
 

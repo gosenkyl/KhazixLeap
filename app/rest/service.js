@@ -148,7 +148,7 @@ export default Service.extend({
     var headers = get(this, 'headers');
     if (headers !== undefined) {
       hash.beforeSend = function (xhr) {
-        forEach.call(keysFunc(headers), function (key) {
+        Array.prototype.forEach.call(keysFunc(headers), function (key) {
           xhr.setRequestHeader(key, headers[key]);
         });
       };

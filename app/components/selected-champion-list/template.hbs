@@ -1,0 +1,15 @@
+{{#draggable-object-target action="dropChampion" dragOverAction="dragOver" dragOutAction="dragOut"}}
+    <div class="selected col-md-6">
+        <div class="selected-container">
+
+            <div class="placeholder-text">Drag a Champion</div>
+
+          {{#if championsSelected}}
+              <ul><li {{action "clearAll"}}>Clear</li></ul>
+          {{/if}}
+
+          {{champion-list content=selectedChampions containerSize="half"}}
+
+        </div>
+    </div>
+{{/draggable-object-target}}
