@@ -2,7 +2,8 @@ import Ember from 'ember';
 
 let {
   Component,
-  computed
+  computed,
+  inject
   } = Ember;
 
 export default Component.extend({
@@ -15,18 +16,18 @@ export default Component.extend({
     return this.get("selectedChampions.length") > 0;
   }),
 
+  userChampionService: inject.service("user-champion"),
+
+  type: null,
+
   actions: {
 
-    dropChampion: function (object/*, params*/) {
+    dropChampion: function (champion/*, params*/) {
 
-      this.store.createRecord("user-champion", {
-        userId: 1,
-        championId: 'Rengar',
-        typeId: 'BUY'
-      });
+      this.get("userChampionService").createUserChampion(champion, this.get("type"));
 
-      object.set("selected", true);
-      console.log("DROP CHAMPION", object);
+      champion.set("selected", true);
+      console.log("DROP CHAMPION", champion);
     },
 
     dragOver: function () {
@@ -37,9 +38,21 @@ export default Component.extend({
       console.log("DRAG OUT");
     },
 
+    /*dragStart: function(champion){
+      console.log("DRAG START", champion);
+    },
+
+    dragEnd: function(champion){
+      console.log("DRAG END", champion);
+    },*/
+
     clearAll: function (){
       this.get("content").forEach((champion)=>{
-        champion.set("selected", false);
+
+        if(champion.get("selected") === true) {
+          champion.set("selected", false);
+          this.get("userChampionService").deleteUserChampion(champion, this.get("type"));
+        }
       });
     }
 

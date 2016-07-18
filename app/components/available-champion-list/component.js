@@ -12,13 +12,13 @@ export default Component.extend({
   availableChampions: computed.filterBy("content", "selected", false),
 
   actions: {
-    dragStart: function(champion){
+    /*dragStart: function(champion){
       console.log("DRAG START", champion);
     },
 
     dragEnd: function(champion){
       console.log("DRAG END", champion);
-    }
+    }*/
   }
 
 });

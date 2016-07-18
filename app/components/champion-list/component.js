@@ -22,6 +22,18 @@ export default Component.extend({
     }
 
     return classes;
-  })
+  }),
+
+  actions: {
+
+    dragStart: function(champion){
+      console.log("DRAG START", champion);
+    },
+
+    dragEnd: function(champion){
+      console.log("DRAG END", champion);
+    }
+
+  }
 
 });
