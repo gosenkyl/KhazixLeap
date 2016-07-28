@@ -1,9 +1,10 @@
 import Model from 'ember-data/model';
 import DS from 'ember-data';
+import ChampionMixin from '../mixins/champion';
 // import attr from 'ember-data/attr';
 // import { belongsTo, hasMany } from 'ember-data/relationships';
 
-export default Model.extend({
+export default Model.extend(ChampionMixin, {
   //allytips: , // List<String>
   blurb: DS.attr(),
   //enemytips: , // List<String>
@@ -20,4 +21,5 @@ export default Model.extend({
   //stats: , // Stats
   //tags: , // List<String>
   title: DS.attr() // String
+
 });

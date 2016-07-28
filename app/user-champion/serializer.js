@@ -1,5 +1,5 @@
-import KhazixLeap from '../khazix-leap/serializer';
+import DS from 'ember-data';
 
-export default KhazixLeap.extend({
+export default DS.JSONSerializer.extend({
 
 });

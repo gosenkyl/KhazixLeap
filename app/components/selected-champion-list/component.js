@@ -47,13 +47,13 @@ export default Component.extend({
     },*/
 
     clearAll: function (){
-      this.get("content").forEach((champion)=>{
 
-        if(champion.get("selected") === true) {
-          champion.set("selected", false);
+      this.get("selectedChampions").forEach(champion=>{
           this.get("userChampionService").deleteUserChampion(champion, this.get("type"));
-        }
+          champion.set("selected", false);
       });
+
+
     }
 
   }

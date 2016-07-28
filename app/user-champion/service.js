@@ -9,6 +9,10 @@ export default Ember.Service.extend({
   store: inject.service(),
   userService: inject.service("user"),
 
+  getUserChampions: function(type){
+    return this.get("store").query("user-champion", {userId: this.get("userService").get("userId"), type: type});
+  },
+
   createUserChampion: function(champion, type){
     let userChampion = this.get("store").createRecord("user-champion", {
       userId: this.get("userService.userId"),
@@ -22,16 +26,9 @@ export default Ember.Service.extend({
   deleteUserChampion: function(champion, type){
     let id = this.get("userService.userId") + "-" +  champion.get("id") + "-" + type;
 
-    this.get("store").findRecord('user-champion', id).then(function (userChampion) {
+    let userChampion = this.get("store").peekRecord('user-champion', id);
 
-      userChampion.destroyRecord();
-
-    }).catch(function(failure){
-
-      console.log(failure);
-
-    });
-
+    userChampion.destroyRecord();
   }
 
 });
