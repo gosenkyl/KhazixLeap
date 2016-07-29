@@ -1,15 +1,9 @@
-<div class="row">
-  {{#each content as |champion|}}
+{{#each content as |champion|}}
 
-        <div class="{{columnSizeClasses}}">
-
-          {{#draggable-object content=champion dragStartAction='dragStart' dragEndAction='dragEnd'}}
-
-            {{champion-card content=champion}}
-
-          {{/draggable-object}}
-
-        </div>
-
-  {{/each}}
+  <div class="{{columnSizeClasses}}">
+  {{#draggable-object content=champion dragStartAction='dragStart' dragEndAction='dragEnd' class="col"}}
+    {{champion-card content=champion}}
+  {{/draggable-object}}
   </div>
+
+{{/each}}

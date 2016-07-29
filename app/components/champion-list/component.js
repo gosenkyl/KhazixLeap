@@ -7,7 +7,7 @@ let {
 
 export default Component.extend({
 
-  classNames: ["champion-list"],
+  classNames: ["row champion-list"],
 
   content: null,
   containerSize: "full",

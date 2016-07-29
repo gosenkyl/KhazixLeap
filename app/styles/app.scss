@@ -9,6 +9,27 @@ body{
   background-color: $white;
 }
 
+.flex{
+  display: flex;
+  height: 100%;
+}
+
+.flex-grow{
+  flex-grow: 1;
+}
+
+/*** ALTERNATE TO BOOTSTRAP, DOESN'T CHANGE COLS ***/
+/*.flex-grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.flex-grid .col {
+  position: relative;
+  margin: 2% 0;
+  flex: 0 0 48%;
+}*/
+
 ul{
   list-style-type: none;
   padding: 0;
@@ -76,12 +97,17 @@ ul{
 
 }
 
+.half-container{
+  min-width: 50%;
+  max-width: 50%;
+}
+
 .float-left{
   float: left;
 }
 
 .selected{
-  height: 80vh;
+  //height: 80vh;
   overflow-y: scroll;
 
   .selected-container {
@@ -134,7 +160,7 @@ ul{
 .available{
 
   .champion-list{
-    height: 80vh;
+    //height: 80vh;
     overflow-x: hidden;
     overflow-y: scroll;
 

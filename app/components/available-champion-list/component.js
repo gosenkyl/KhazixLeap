@@ -7,6 +7,8 @@ let {
 
 export default Component.extend({
 
+  classNames: ["flex-grow"],
+
   content: null,
 
   availableChampions: computed.filterBy("content", "selected", false),

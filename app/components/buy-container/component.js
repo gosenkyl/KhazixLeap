@@ -7,7 +7,7 @@ let {
 
 export default Ember.Component.extend({
 
-  classNames: ['row float-left'],
+  classNames: ['flex'],
 
   content: null,
   type: null
