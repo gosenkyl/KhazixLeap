@@ -16,6 +16,10 @@ export default Component.extend({
     return this.get("selectedChampions.length") > 0;
   }),
 
+  borderClass: computed("championsSelected", function(){
+    return this.get("championsSelected") ? "border-bot" : "";
+  }),
+
   userChampionService: inject.service("user-champion"),
 
   type: null,

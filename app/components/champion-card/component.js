@@ -6,6 +6,8 @@ let{
 
 export default Ember.Component.extend({
 
+  classNames: ["champion-shadow"],
+
   content: null,
 
   imageSrc: computed("content", function(){

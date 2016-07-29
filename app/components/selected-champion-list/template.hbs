@@ -2,11 +2,13 @@
     <div class="selected col-md-6">
         <div class="selected-container">
 
-            <div class="placeholder-text">Drag a Champion</div>
+          <ul class={{borderClass}}>
+            {{#if championsSelected}}
+                <li {{action "clearAll"}}>Clear All</li>
+            {{/if}}
+          </ul>
 
-          {{#if championsSelected}}
-              <ul><li {{action "clearAll"}}>Clear</li></ul>
-          {{/if}}
+          <div class="placeholder-text">Drag a Champion</div>
 
           {{champion-list content=selectedChampions containerSize="half"}}
 

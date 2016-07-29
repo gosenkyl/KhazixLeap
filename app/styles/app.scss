@@ -16,19 +16,19 @@ ul{
 
 .header{
   background-color: $dark;
-  height: 4vmax;
+  height: 50px;
   color: $white;
   font-weight: 400;
-  font-size: 1.8vmax;
+  font-size: 0.8em;
 }
 
 .menu{
   margin-top: -10px;
   background-color: $medium;
-  height: 8vmax;
+  height: 75px;
   color: $white;
   font-weight: 400;
-  font-size: 1.8vmax;
+  font-size: 0.8em;
 
   a{
     color: inherit;
@@ -38,7 +38,7 @@ ul{
   .options {
     .option-group {
       float: left;
-      padding: .9vmax;
+      padding: 10px;
     }
     .option-group div:nth-child(1){
       color: $dark;
@@ -46,7 +46,7 @@ ul{
     }
     .option-group div:not(:nth-child(1)){
       float: left;
-      padding: .9vmax;
+      padding: 10px;
     }
   }
 
@@ -56,7 +56,7 @@ ul{
   color: $medium;
 
   .name{
-    font-size: 1.5vmax;
+    font-size: 0.8em;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
@@ -81,11 +81,13 @@ ul{
 }
 
 .selected{
-  height: 88vh;
+  height: 80vh;
   overflow-y: scroll;
 
   .selected-container {
-    margin: 0 20px;
+    margin: 0 0 0 20px;
+
+    padding: 0 10px;
 
     height: 100%;
     text-align: center;
@@ -96,12 +98,34 @@ ul{
       color: $white;
     }
 
+    .champion-shadow{
+      margin-bottom: 20px;
+
+      -moz-box-shadow: 10px 10px 5px 0px $dark;
+      -webkit-box-shadow: 10px 10px 5px 0px $dark;
+      box-shadow: 10px 10px 5px 0px $dark;
+    }
+
+    ul {
+      min-height: 20px;
+    }
+
+    .border-bot{
+      -moz-box-shadow: 0 6px 5px -5px $dark;
+      -webkit-box-shadow: 0 6px 5px -5px $dark;
+      box-shadow: 0 6px 5px -5px $dark;
+    }
+
     ul > li {
-      width: 33%;
-      border-bottom: solid $white thin;
+      padding: 5px 0;
+    }
+
+    ul > li:hover {
+      background-color: $dark;
     }
 
     .placeholder-text {
+      font-size: 1.5em;
       padding: 25px;
     }
   }
@@ -110,8 +134,20 @@ ul{
 .available{
 
   .champion-list{
-    height: 88vh;
+    height: 80vh;
+    overflow-x: hidden;
     overflow-y: scroll;
+
+    padding: 0 10px;
+
+    .champion-shadow{
+      margin-bottom: 20px;
+
+      -moz-box-shadow: 10px 10px 5px 0px $dark;
+      -webkit-box-shadow: 10px 10px 5px 0px $dark;
+      box-shadow: 10px 10px 5px 0px $dark;
+    }
+
   }
 
 }
