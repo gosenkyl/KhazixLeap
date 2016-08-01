@@ -7,7 +7,7 @@ let {
 
 export default Ember.Component.extend({
 
-  classNames: ['flex'],
+  classNames: ['flex-container'],
 
   content: null,
   type: null

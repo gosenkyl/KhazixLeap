@@ -7,7 +7,7 @@ let {
 
 export default Component.extend({
 
-  classNames: ["flex-grow"],
+  classNames: ["flex-grow-half scroll-vertical"],
 
   content: null,
 

@@ -9,14 +9,38 @@ body{
   background-color: $white;
 }
 
-.flex{
+html, body {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  background-color: $white;
+}
+
+.vwrapper {
   display: flex;
+  flex-direction: column;
+
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+
   height: 100%;
 }
 
-.flex-grow{
-  flex-grow: 1;
+.flex-container{
+  flex: 1 1 auto;
+  display: flex;
 }
+
+.flex-grow-half{
+  flex: 1 0 50%;
+}
+
+.scroll-vertical{
+  overflow-y: scroll;
+}
+
 
 /*** ALTERNATE TO BOOTSTRAP, DOESN'T CHANGE COLS ***/
 /*.flex-grid {
@@ -107,8 +131,6 @@ ul{
 }
 
 .selected{
-  //height: 80vh;
-  overflow-y: scroll;
 
   .selected-container {
     margin: 0 0 0 20px;
