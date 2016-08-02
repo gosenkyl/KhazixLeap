@@ -1,13 +1,12 @@
 import Ember from 'ember';
 
 let {
-  RSVP,
-  inject
+  Component
   } = Ember;
 
-export default Ember.Component.extend({
+export default Component.extend({
 
-  classNames: ['flex-container'],
+  classNames: ['flex flex-row'],
 
   content: null,
   type: null

@@ -8,7 +8,7 @@ let {
 
 export default Component.extend({
 
-  classNames: ["flex-grow-half scroll-vertical"],
+  classNames: ["selected-container flex-50 scroll-vertical"],
 
   content: null,
 

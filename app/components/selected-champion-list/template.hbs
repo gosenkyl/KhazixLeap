@@ -1,17 +1,13 @@
 {{#draggable-object-target action="dropChampion" dragOverAction="dragOver" dragOutAction="dragOut"}}
-    <div class="selected">
-        <div class="selected-container">
 
-          <ul class={{borderClass}}>
-            {{#if championsSelected}}
-                <li {{action "clearAll"}}>Clear All</li>
-            {{/if}}
-          </ul>
+  <ul class={{borderClass}}>
+    {{#if championsSelected}}
+        <li {{action "clearAll"}}>Clear All</li>
+    {{/if}}
+  </ul>
 
-          <div class="placeholder-text">Drag a Champion</div>
+  <div class="placeholder-text">Drag a Champion</div>
 
-          {{champion-list content=selectedChampions containerSize="half"}}
+  {{champion-list content=selectedChampions containerSize="half"}}
 
-        </div>
-    </div>
 {{/draggable-object-target}}

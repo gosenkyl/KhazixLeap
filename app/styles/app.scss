@@ -2,39 +2,62 @@ $dark: #3C494F;
 $medium: #5A6A71;
 $white: #FFFFFF;
 
-html,
-body{
+html, body {
+  height: 100%;
+  width: 100%;
   padding: 0;
   margin: 0;
   background-color: $white;
 }
 
-html, body {
-  height: 100%;
-  padding: 0px;
-  margin: 0px;
-  background-color: $white;
-}
-
-.vwrapper {
+body {
   display: flex;
   flex-direction: column;
-
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch;
-
-  height: 100%;
 }
 
-.flex-container{
-  flex: 1 1 auto;
+body > .ember-view{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex{
   display: flex;
+
+  &-row{
+    flex-direction: row;
+  }
 }
 
-.flex-grow-half{
-  flex: 1 0 50%;
+.flex{
+  &-25{
+    min-width: 25%;
+    max-width: 25%;
+  }
+
+  &-33{
+    min-width: 33%;
+    max-width: 33%;
+  }
+
+  &-50{
+    min-width: 50%;
+    max-width: 50%;
+  }
+
+  &-66{
+    min-width: 66%;
+    max-width: 66%;
+  }
+
+  &-75{
+    min-width: 75%;
+    max-width: 75%;
+  }
+
+  &-100{
+    min-width: 100%;
+    max-width: 100%;
+  }
 }
 
 .scroll-vertical{
@@ -61,7 +84,7 @@ ul{
 
 .header{
   background-color: $dark;
-  height: 50px;
+  min-height: 50px;
   color: $white;
   font-weight: 400;
   font-size: 0.8em;
@@ -70,7 +93,7 @@ ul{
 .menu{
   margin-top: -10px;
   background-color: $medium;
-  height: 75px;
+  min-height: 75px;
   color: $white;
   font-weight: 400;
   font-size: 0.8em;
@@ -117,74 +140,66 @@ ul{
   }
 }
 
-.full-container{
-
-}
-
-.half-container{
-  min-width: 50%;
-  max-width: 50%;
-}
-
 .float-left{
   float: left;
 }
 
-.selected{
 
-  .selected-container {
-    margin: 0 0 0 20px;
+.selected-container {
+  margin: 0 0 0 20px;
 
-    padding: 0 10px;
+  padding: 0 10px;
 
-    height: 100%;
-    text-align: center;
+  height: 100%;
+  text-align: center;
+  color: $white;
+  background-color: $medium;
+
+  .champion{
     color: $white;
-    background-color: $medium;
+  }
 
-    .champion{
-      color: $white;
-    }
+  .champion-shadow{
+    margin-bottom: 20px;
 
-    .champion-shadow{
-      margin-bottom: 20px;
+    -moz-box-shadow: 10px 10px 5px 0px $dark;
+    -webkit-box-shadow: 10px 10px 5px 0px $dark;
+    box-shadow: 10px 10px 5px 0px $dark;
+  }
 
-      -moz-box-shadow: 10px 10px 5px 0px $dark;
-      -webkit-box-shadow: 10px 10px 5px 0px $dark;
-      box-shadow: 10px 10px 5px 0px $dark;
-    }
+  ul {
+    min-height: 20px;
+  }
 
-    ul {
-      min-height: 20px;
-    }
+  .border-bot{
+    -moz-box-shadow: 0 6px 5px -5px $dark;
+    -webkit-box-shadow: 0 6px 5px -5px $dark;
+    box-shadow: 0 6px 5px -5px $dark;
+  }
 
-    .border-bot{
-      -moz-box-shadow: 0 6px 5px -5px $dark;
-      -webkit-box-shadow: 0 6px 5px -5px $dark;
-      box-shadow: 0 6px 5px -5px $dark;
-    }
+  ul > li {
+    padding: 5px 0;
+  }
 
-    ul > li {
-      padding: 5px 0;
-    }
+  ul > li:hover {
+    background-color: $dark;
+  }
 
-    ul > li:hover {
-      background-color: $dark;
-    }
-
-    .placeholder-text {
-      font-size: 1.5em;
-      padding: 25px;
-    }
+  .placeholder-text {
+    font-size: 1.5em;
+    padding: 25px;
   }
 }
 
-.available{
+.available-container{
+
+  overflow-y: auto;
+  overflow-x: hidden;
 
   .champion-list{
     //height: 80vh;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    //overflow-x: hidden;
+    //overflow-y: scroll;
 
     padding: 0 10px;
 
