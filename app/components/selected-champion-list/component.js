@@ -8,9 +8,11 @@ let {
 
 export default Component.extend({
 
-  classNames: ["selected-container flex-50 scroll-vertical"],
+  classNames: ["selected-container flex-50"],
 
   content: null,
+
+  selectedHeaderText: "SELECTED",
 
   selectedChampions: computed.filterBy("content", "selected", true),
 

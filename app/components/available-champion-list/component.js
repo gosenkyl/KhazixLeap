@@ -11,6 +11,8 @@ export default Component.extend({
 
   content: null,
 
+  availableHeaderText: "AVAILABLE",
+
   availableChampions: computed.filterBy("content", "selected", false),
 
   actions: {

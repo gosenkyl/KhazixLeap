@@ -6,7 +6,7 @@ let{
 
 export default Ember.Component.extend({
 
-  classNames: ["champion-shadow"],
+  classNames: ["champion champion-shadow center-horizontally"],
 
   content: null,
 

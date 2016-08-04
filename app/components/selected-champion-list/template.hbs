@@ -1,4 +1,6 @@
-{{#draggable-object-target action="dropChampion" dragOverAction="dragOver" dragOutAction="dragOut"}}
+<div class="header-text">{{selectedHeaderText}}</div>
+
+{{#draggable-object-target action="dropChampion" dragOverAction="dragOver" dragOutAction="dragOut" class="draggable-area"}}
 
   <ul class={{borderClass}}>
     {{#if championsSelected}}
