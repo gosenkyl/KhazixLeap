@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('skins');
   this.route('pick');
   this.route('ban');
+  this.route('home', {path: ''});
 });
 
 export default Router;

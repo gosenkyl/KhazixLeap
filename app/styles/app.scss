@@ -31,6 +31,10 @@ body > .ember-view{
   }
 }
 
+.self-center{
+  align-self: center;
+}
+
 .flex{
   &-25{
     min-width: 25%;
@@ -229,6 +233,8 @@ ul{
 
   overflow-y: auto;
   overflow-x: hidden;
+
+  text-align: center;
 
   .champion-list{
     //height: 80vh;

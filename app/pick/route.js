@@ -1,4 +1,18 @@
 import Ember from 'ember';
 
-export default Ember.Route.extend({
+let {
+  Route,
+  inject
+  } = Ember;
+
+export default Route.extend({
+
+  type: "PICK",
+
+  userChampionService: inject.service("user-champion"),
+
+  model: function(){
+    return this.get("userChampionService").getChampionsByUserAndType(this.get("type"));
+  }
+
 });
