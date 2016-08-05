@@ -2,7 +2,8 @@ import Ember from 'ember';
 
 let {
   Component,
-  computed
+  computed,
+  isEmpty
   } = Ember;
 
 export default Component.extend({
@@ -14,6 +15,27 @@ export default Component.extend({
   availableHeaderText: "AVAILABLE",
 
   availableChampions: computed.filterBy("content", "selected", false),
+
+  searchText: null,
+
+  searchChampions: computed("availableChampions.[]", "searchText", function(){
+
+    if(isEmpty(this.get("searchText"))){
+      return this.get("availableChampions");
+    }
+
+    let lowerSearchText = this.get("searchText").toLowerCase();
+
+    return this.get("availableChampions").filter(champion => {
+
+      if(champion.get("name").toLowerCase().indexOf(lowerSearchText) !== -1){
+        return true;
+      }
+
+      return false;
+    });
+
+  }),
 
   actions: {
     /*dragStart: function(champion){

@@ -3,7 +3,7 @@
 {{#draggable-object-target action="dropChampion" dragOverAction="dragOver" dragOutAction="dragOut" class="draggable-area"}}
 
   <ul class={{borderClass}}>
-    {{#if championsSelected}}
+    {{#if isChampionsSelected}}
         <li {{action "clearAll"}}>Clear All</li>
     {{/if}}
   </ul>

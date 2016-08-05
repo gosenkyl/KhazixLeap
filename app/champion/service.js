@@ -6,6 +6,10 @@ export default Ember.Service.extend({
 
   getAllChampions: function(){
     return this.get("store").findAll("champion");
+  },
+
+  peekAllChampions: function(){
+    return this.get("store").peekAll("champion");
   }
 
 });

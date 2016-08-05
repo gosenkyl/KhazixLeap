@@ -16,12 +16,12 @@ export default Component.extend({
 
   selectedChampions: computed.filterBy("content", "selected", true),
 
-  championsSelected: computed("selectedChampions.[]", function(){
+  isChampionsSelected: computed("selectedChampions.[]", function(){
     return this.get("selectedChampions.length") > 0;
   }),
 
-  borderClass: computed("championsSelected", function(){
-    return this.get("championsSelected") ? "border-bot" : "";
+  borderClass: computed("isChampionsSelected", function(){
+    return this.get("isChampionsSelected") ? "border-bot" : "";
   }),
 
   userChampionService: inject.service("user-champion"),
@@ -60,7 +60,6 @@ export default Component.extend({
           this.get("userChampionService").deleteUserChampion(champion, this.get("type"));
           champion.set("selected", false);
       });
-
 
     }
 
