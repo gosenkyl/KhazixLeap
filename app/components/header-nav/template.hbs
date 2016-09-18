@@ -1,7 +1,13 @@
 <div class="flex flex-row header">
-  <div class="self-center">{{userName}}</div>
+  <div class="flex-grow self-center">{{userName}}</div>
+
+  <div class="flex flex-right self-center">
+      <div {{action "onLogIn"}}>Log In</div>
+  </div>
+
 </div>
 <div class="menu">
+
   <div class="container">
 
     <div class="options center-horizontally">

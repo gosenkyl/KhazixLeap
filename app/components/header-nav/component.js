@@ -9,6 +9,14 @@ export default Ember.Component.extend({
 
   userService: inject.service("user"),
 
-  userName: computed.alias("userService.userName")
+  userName: computed.alias("userService.userName"),
+
+  actions: {
+
+    onLogIn: function(){
+      console.log("LOGIN");
+    }
+
+  }
 
 });

@@ -5,6 +5,7 @@ import Image from '../objects/image';
 let { isNone } = Ember;
 
 export default DS.Transform.extend({
+
   deserialize: function (serialized) {
 
     let image = Image.create({
@@ -20,6 +21,7 @@ export default DS.Transform.extend({
 
     return image;
   },
+
   serialize: function (deserialized) {
 
     if (isNone(deserialized) || (typeof deserialized === "string")) {
@@ -28,4 +30,5 @@ export default DS.Transform.extend({
 
     return JSON.stringify(deserialized);
   }
+
 });

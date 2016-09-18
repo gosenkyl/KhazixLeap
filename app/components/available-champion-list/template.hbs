@@ -1,5 +1,7 @@
 <div class="header-text">{{availableHeaderText}}</div>
 
-<div>{{input type="text" value=searchText}}</div>
+<div class="flex flex-row flex-horizontal-center">
+  {{input type="text" value=searchText class="champion-search form-control" placeholder="Search a Champion"}}
+</div>
 
 {{champion-list content=searchChampions containerSize="half"}}
